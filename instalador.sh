@@ -7,7 +7,7 @@
 sudo apt-get purge apache2* bind9* samba* -y
 sudo apt-get update -y
 sudo apt-get upgrade -y
-sudo apt-get install nano xorg lxde-core tightvncserver gedit
+sudo apt-get install nano xorg lxde-core tightvncserver gedit -y
 sudo apt-get update -y
 clear
 echo ""
