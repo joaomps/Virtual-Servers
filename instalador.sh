@@ -15,7 +15,7 @@ echo "Enter a password for VNC"
 tightvncserver && tightvncserver -kill :80
 sed -i 'lxterminal &' ~/.vnc/xstartup
 sed -i '/usr/bin/lxsession -s LXDE &' ~/.vnc/xstartup
-wget https://raw.githubusercontent.com/joaomps/Virtual-Servers/master/script.sh
+wget https://raw.githubusercontent.com/joaomps/Virtual-Servers/master/script.sh -o /root/Desktop
 vncserver :80 -geometry 1024x768 -depth 16 -pixelformat rgb565
 clear
 echo ""
