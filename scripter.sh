@@ -402,8 +402,6 @@ filter_pvesh_results(){
 	$1 | 2> /dev/null | sed 's/^[ \t]*//' | sed 's/"//g' | sed 's/{//g' | sed 's/}//g' | sed 's/\[//g' | sed 's/\]//g' | sed 's/,//g' | sed 's/ : /   /g' | sed '/^$/d'
 }
 
-}
-
 function usage() {
 
 	echo "Create oVZ VM: "
