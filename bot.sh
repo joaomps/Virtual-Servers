@@ -1,6 +1,6 @@
 #!/bin/bash
 if [ `ps -e | grep -c bot.sh` -gt 2 ]; then echo "Already running, i'm killing old process!"; pkill -9 -o chrome; killall -9 chrome; pkill -9 -o chromium; killall -9 chromium; pkill -9 -o chromium-browser; killall -9 chromium-browser; killall -9 Xvfb; pkill -9 -o bot.sh; fi
-usage() { echo -e "Usage: $0 -t <Timer to restart chrome (seconds)>] -o \"account,password\" -l <Separate traffic exchange links with space delimiter(in quote)>\nExample: $0 -t 3600 -l http://22hit...\nExample: $0 -t 3600 -l \"http://22hit... http://247webhit... http://...\"\nExample: $0 -t 3600 -o \"otohit_account,otohits_password\" -l \"http://22hit...\"\nExample: $0 -t 3600 -o \"otohit_account,otohits_password\"" 1>&2; exit 1; }
+usage() { echo -e "Usage: $0 -t <Timer to restart chrome (seconds)>] -o \"account,password\" -l <Separate links with space delimiter(in quote)>\nExample: $0 -t 3600 -l http://google...\nExample: $0 -t 3600 -l \"http://bing... http://proto... http://123...\"\nExample: $0 -t 3600 -o \"acc,pwd\" -l \"http://hit...\"\nExample: $0 -t 3600 -o \"acc,pw\"" 1>&2; exit 1; }
 [ $# -eq 0 ] && usage
 otolink=""
 google=false
@@ -14,7 +14,7 @@ while getopts ":ht:l:o:g-:" arg; do
             ;;
         o)
             IFS=', ' read -r -a otohits <<< ${OPTARG}
-            otolink="http://www.otohits.net/account/wfautosurf"
+            otolink="http://www.google.pt/"
             ;;
         g)
             google=true
